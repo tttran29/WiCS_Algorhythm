@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "WiCS_Algorhythm",
+			"path": "../../../../../../.."
+		}
+	],
+	"settings": {
+		"java.compile.nullAnalysis.mode": "automatic"
+	}
+}
