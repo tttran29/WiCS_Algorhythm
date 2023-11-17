@@ -1,0 +1,29 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+</head>
+  
+  <body>
+    <h1> Login </h1>
+    <div class="login">
+      <form>
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:</label><br>
+        <input type="text" id="password" name="password">
+      </form>
+    </div>
+  
+    <div class="submit_button">
+      <button type="submit" onclick="handleLoginClick()">Submit</button>
+    </div>
+  
+    <script>
+      function handleLoginClick() {
+        //logic to check if login username and password matches the database
+        window.location.href = 'profile.html';
+      }
+    </script>
+  </body>
+  

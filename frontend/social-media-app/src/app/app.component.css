@@ -1,0 +1,51 @@
+header {
+    color: MediumSeaGreen;
+    padding-top: 20px;
+    padding-bottom: 30px;
+  
+    font-family: "Times New Roman", Times, monospace;
+    font-size: 20px;
+    text-align: center;
+  
+  }
+  
+  h1 {
+    font-family: "Times New Roman", Times, monospace;
+    font-size: 30px;
+    text-align: center;
+    color: MediumSeaGreen;
+  }
+  
+  body {
+    background-color: white;
+    text-align: center;
+    margin: 2em;
+    padding: 5px;
+  }
+  
+  button {
+    background-color: MediumSeaGreen;
+    border: none;
+    color: white;
+    padding: 8px 25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+  }
+  
+  html {
+    height: 100%;
+    width: 100%;
+  
+  }
+  
+  .profile {
+    text-align: left
+  }
+  
+  .rounded-image {
+      border-radius: 50%; /* Make it a circle */
+      overflow: hidden; /* Ensure the image stays within the rounded shape */
+  }

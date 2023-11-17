@@ -1,0 +1,63 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+  </head>
+  
+  <body>
+    <h1> Sign Up </h1>
+    <div class="signup">
+      <form>
+  
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username"><br>
+        
+        <label for="first">Firstname:</label><br>
+        <input type="text" id="first" name="first"><br>
+  
+        <label for="last">Lastname:</label><br>
+        <input type="text" id="last" name="last"><br>
+  
+        <label for="graduation">Graduation Year:</label><br>
+        <input type="text" id="graduation" name="graduation"><br>
+  
+        <label for="email">Email:</label><br>
+        <input type="text" id="email" name="email"><br>
+  
+        <label for="hometown">Hometown:</label><br>
+        <input type="text" id="hometown" name="hometown"><br>
+  
+        <label for="imageURL">Avatar Image Url:</label><br>
+        <input type="text" id="imageURL" name="imageURL"><br>
+  
+        <label for="password">Password:</label><br>
+        <input type="text" id="password" name="password"><br>
+  
+      </form>
+    </div>
+    <div class="submit_button">
+      <button type="submit" onclick="handleSignUpClick()">Submit</button>
+    </div>
+  
+    <script>
+      function handleSignUpClick() {
+        //gets the forms values
+  
+        var username = document.getElementById("username").value;
+        var first = document.getElementById("first").value;
+        var last = document.getElementById("last").value;
+        var email = document.getElementById("email").value;
+        var graduation = document.getElementById("graduation").value;
+        var hometown = document.getElementById("hometown").value;
+        var imageURL = document.getElementById("imageURL").value;
+        var password = document.getElementById("password").value;
+        //logic to define and send the sql request for the user to be made
+        var sqlString = 'INSERT INTO User (userId, username, firstName, lastName, email, graduationYear, hometown, imageURL, password) VALUES (' + ');';
+  
+        window.location.href = 'index.html';
+  
+      };
+  
+    </script>
+  </body>
+  

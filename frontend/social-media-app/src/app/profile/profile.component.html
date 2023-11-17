@@ -1,0 +1,66 @@
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+  </head>
+  
+  <body>
+    <header>
+      <p>Welcome <span id="username"></span>! </p>
+    </header>
+    <div id="imageContainer"></div>
+    <div class="profile">
+      <p><strong>First Name:</strong>
+        <span id="firstName"></span>
+      </p>
+      <p><strong>Last Name:</strong>
+        <span id="lastName"></span>
+      </p>
+      <p><strong>Email:</strong>
+        <span id="email"></span>
+      </p>
+      <p><strong>Graduation Year:</strong>
+        <span id="gradYear"></span>
+      </p>
+      <p><strong>Hometown:</strong>
+        <span id="hometown"></span>
+      </p>
+    </div>
+  
+    <script>
+      //function to fetch user profile data and update the HTML elements
+      async function fetchUserProfile() {
+        try {
+          const response = await fetch('/api/userprofile'); // Replace with your actual endpoint
+          const userData = await response.json();
+  
+          //update HTML elements
+          document.getElementById('username').innerText = userData.username;
+          document.getElementById('firstName').innerText = userData.firstName;
+          document.getElementById('lastName').innerText = userData.lastName;
+          document.getElementById('email').innerText = userData.email;
+          document.getElementById('gradYear').innerText = userData.gradYear;
+          document.getElementById('hometown').innerText = userData.hometown;
+          //retrieve the user's image URL from the server after login
+          var userImageURL = userData.imageURL;
+          //create and append an img element with the user's image URL
+          var imageContainer = document.getElementById("imageContainer");
+          var imgElement = document.createElement("img");
+          imgElement.src = userImageURL;
+          imgElement.alt = "User Image";
+          //apply styles
+          imgElement.style.width = "100px";
+          imgElement.style.height = "100px";
+          // Add the "rounded-image" class to the img element
+          imgElement.classList.add("rounded-image");
+          //append image to the container
+          imageContainer.appendChild(imgElement);
+        } catch (error) {
+          console.error('Error fetching user profile:', error);
+        }
+      }
+      // Call the function when the page loads
+      window.onload = fetchUserProfile;
+    </script>
+  </body>
+  
